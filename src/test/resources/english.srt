@@ -1,0 +1,844 @@
+﻿1
+00:00:00,175 --> 00:00:03,150
+Okay, And now, since 1981,
+
+2
+00:00:03,175 --> 00:00:04,950
+ there has been a lot of progress 
+
+3
+00:00:05,075 --> 00:00:10,475
+in designing quantum algorithms and thinking about implementation
+
+4
+00:00:10,525 --> 00:00:16,700
+so that there's a lot of work on how to utilize quantum power. 
+
+5
+00:00:16,775 --> 00:00:18,300
+And for example, 
+
+6
+00:00:18,350 --> 00:00:26,150
+I want to specifically mention a particularly famous and striking example
+
+7
+00:00:26,150 --> 00:00:31,675
+namely that we know that in modern cryptography, 
+
+8
+00:00:31,875 --> 00:00:38,275
+there are many crypto systems to protect secrets. 
+
+9
+00:00:38,475 --> 00:00:44,750
+They would use something related to factoring of large integers.
+
+10
+00:00:45,075 --> 00:00:52,025
+And now if I give you, say, a 400-bit ... a 400-digit integer, 
+
+11
+00:00:52,100 --> 00:00:56,825
+it turns out to be extremely difficult to factor it. 
+
+12
+00:00:58,225 --> 00:01:01,675
+So we all know that multiplication is easy. 
+
+13
+00:01:01,675 --> 00:01:05,950
+If you multiply two 200-digit numbers, 
+
+14
+00:01:06,475 --> 00:01:08,325
+I think that you can do it very fast,
+
+15
+00:01:08,350 --> 00:01:11,200
+and certainly with a computer, you can do it really fast. 
+
+16
+00:01:11,300 --> 00:01:15,775
+But if I give you a 400-bit ... digit number,
+
+17
+00:01:15,775 --> 00:01:22,050
+and ask you where are the two factors, and you will have difficulty doing it. 
+
+18
+00:01:22,050 --> 00:01:28,150
+And now this problem turns out to have a quantum algorithm, 
+
+19
+00:01:28,600 --> 00:01:32,150
+proposed by Peter Shor in 1994.
+
+20
+00:01:32,175 --> 00:01:34,400
+And it's been proved 
+
+21
+00:01:34,450 --> 00:01:38,725
+that a quantum computer will be able to factor it much faster. 
+
+22
+00:01:38,725 --> 00:01:43,200
+So there are many ways to estimate 
+
+23
+00:01:43,250 --> 00:01:45,900
+what the running times are of the quantum computer.
+
+24
+00:01:45,900 --> 00:01:48,275
+and so one estimate saying that 
+
+25
+00:01:48,400 --> 00:01:54,175
+if you today want to factor at 400-digit number on the supercomputer, 
+
+26
+00:01:54,225 --> 00:01:56,425
+it would take 600,000 years.
+
+27
+00:01:56,425 --> 00:02:00,025
+but if you do it on a quantum computer,
+
+28
+00:02:00,025 --> 00:02:05,325
+and when a suitably sized quantum computer is available, 
+
+29
+00:02:05,350 --> 00:02:10,150
+ok, then you can do it in a few hours, and possibly minutes. 
+
+30
+00:02:10,800 --> 00:02:15,700
+So Peter Shor's algorithm, 
+
+31
+00:02:15,775 --> 00:02:19,975
+it's probably the most famous quantum algorithm. 
+
+32
+00:02:20,075 --> 00:02:29,225
+But that's not the only quantum algorithm that is actually important.
+
+33
+00:02:29,225 --> 00:02:34,400
+I mean, the factoring is great for crypto-code breaking,
+
+34
+00:02:34,475 --> 00:02:37,525
+ but there are other things actually related to.
+
+35
+00:02:37,575 --> 00:02:40,550
+one of the questions from Feynman.
+
+36
+00:02:40,675 --> 00:02:45,175
+ If you have quantum computers, can you simulate quantum systems? 
+
+37
+00:02:45,350 --> 00:02:47,525
+And it turns out for by now, 
+
+38
+00:02:47,550 --> 00:02:52,050
+there are large classes of problems people have proved,
+
+39
+00:02:52,100 --> 00:02:58,075
+ that it's possible to simulate many quantum physical systems with the quantum computer. 
+
+40
+00:02:58,175 --> 00:03:01,525
+And now, in particular,
+
+41
+00:03:01,650 --> 00:03:07,100
+if you really have very powerful quantum computers to simulate physical systems, 
+
+42
+00:03:07,200 --> 00:03:11,100
+you would be able to make progress on problems 
+
+43
+00:03:11,150 --> 00:03:18,100
+such as the design of new materials, or the design of drugs, and so on. 
+
+44
+00:03:18,125 --> 00:03:21,700
+And so it would have enormous potential impact. 
+
+45
+00:03:21,900 --> 00:03:28,525
+And there are things that are actually pretty classical type of nonlinear optimization, 
+
+46
+00:03:28,600 --> 00:03:35,300
+and also there are things related to problems in machine learning, and AI, 
+
+47
+00:03:35,300 --> 00:03:41,175
+Quantum computing is in addition very useful in related fields, 
+
+48
+00:03:41,175 --> 00:03:48,025
+like in quantum communication and quantum cryptography.
+
+49
+00:03:48,075 --> 00:03:53,775
+I think it's a subject that the QCrypt conference is devoted to.
+
+50
+00:03:53,775 --> 00:03:58,975
+ So this would relate to things like unbreakable codes
+
+51
+00:03:58,975 --> 00:04:07,300
+and many other cryptographic operations using quantum operations. 
+
+52
+00:04:07,650 --> 00:04:13,750
+And now, I think that it's fit to point out 
+
+53
+00:04:13,825 --> 00:04:22,150
+that we have some of the originators of the field and also great system builders here. 
+
+54
+00:04:22,300 --> 00:04:27,650
+Ah, I think that the famous work by Charles Bennett and Gilles Brassard 
+
+55
+00:04:27,775 --> 00:04:35,850
+is really the kind of the people who pioneered the whole field. 
+
+56
+00:04:35,950 --> 00:04:39,825
+And professor Jian-Wei Pan is a person 
+
+57
+00:04:39,925 --> 00:04:49,075
+who is really one of the leading experimental system builders in this area.
+
+58
+00:04:49,075 --> 00:04:51,375
+ I think including the Micius satellite.
+
+59
+00:04:51,375 --> 00:04:53,575
+I think this is among the great achievements.
+
+60
+00:04:56,325 --> 00:05:00,600
+And now, as I mentioned the very beginning 
+
+61
+00:05:00,600 --> 00:05:04,050
+the "how" and "why" of quantum computer 
+
+62
+00:05:04,350 --> 00:05:07,075
+remain mysterious to outsiders.
+
+63
+00:05:07,100 --> 00:05:11,925
+And so now we're going to the heart of the matter.
+
+64
+00:05:12,000 --> 00:05:17,100
+ Let's see that how quantum power can be used to speed things up. 
+
+65
+00:05:18,700 --> 00:05:25,900
+And actually, we are going to look at this famous quantum algorithm
+
+66
+00:05:25,975 --> 00:05:30,325
+for doing a factoring by Peter Shor. 
+
+67
+00:05:31,175 --> 00:05:34,475
+Peter Shor's algorithm is very mathematical, 
+
+68
+00:05:34,500 --> 00:05:37,525
+so I'm going to present it in a different way. 
+
+69
+00:05:37,575 --> 00:05:43,025
+And so, kind of hide all the mathematics, 
+
+70
+00:05:43,025 --> 00:05:46,825
+But doing things in a more conceptual way.
+
+71
+00:05:47,650 --> 00:05:51,000
+So I'm going to do it in two steps.
+
+72
+00:05:51,075 --> 00:05:52,450
+In the first step, 
+
+73
+00:05:52,700 --> 00:05:59,775
+I'm going to describe an alternative classical algorithms 
+
+74
+00:05:59,825 --> 00:06:06,625
+to the standard factoring algorithms that a number of theorists are doing
+
+75
+00:06:06,700 --> 00:06:12,025
+So we're going to design a classical algorithm to solve this problem. 
+
+76
+00:06:12,100 --> 00:06:17,925
+And unfortunately, this classical algorithm would also run in exponential time
+
+77
+00:06:18,925 --> 00:06:24,700
+However, this algorithm is going to have the advantage 
+
+78
+00:06:25,200 --> 00:06:31,450
+where if you look at it and if you think about the essence of quantum mechanics, 
+
+79
+00:06:31,500 --> 00:06:37,600
+you'll be able to simulate it with a quantum computer, 
+
+80
+00:06:37,750 --> 00:06:41,075
+with the exponential speedup. 
+
+81
+00:06:41,800 --> 00:06:45,225
+And so therefore, we're going to do a two-step thing. 
+
+82
+00:06:45,225 --> 00:06:48,750
+First, we're going to design a classical algorithm, 
+
+83
+00:06:48,900 --> 00:06:54,750
+and the second part is that we're going to show the quantum power is enough 
+
+84
+00:06:54,925 --> 00:07:00,775
+to simulate how this classical algorithms is used
+
+85
+00:07:01,050 --> 00:07:10,750
+And the wave-particle duality is going to come in at the second stage. 
+
+86
+00:07:11,500 --> 00:07:16,725
+And now, actually, this classical algorithm itself is really interesting 
+
+87
+00:07:16,900 --> 00:07:19,775
+because it has some famous forerunner 
+
+88
+00:07:19,800 --> 00:07:25,350
+because it's really the descendant of some very famous work in physics. 
+
+89
+00:07:25,725 --> 00:07:33,700
+And this branch of physics or chemistry, is called x-ray crystallography. 
+
+90
+00:07:33,850 --> 00:07:37,575
+Okay,it's using x-rays to take pictures 
+
+91
+00:07:37,625 --> 00:07:45,525
+like you know, that we take chest x-ray pictures to see whether there is any disease. 
+
+92
+00:07:45,525 --> 00:07:48,500
+Or when you hurt your leg, 
+
+93
+00:07:48,550 --> 00:07:53,250
+you take x-ray pictures to see whether the bones are intact or not. 
+
+94
+00:07:53,300 --> 00:08:02,400
+Okay now, this very famous line of work starting in 1895 with Roentgen,
+
+95
+00:08:02,650 --> 00:08:11,600
+ who accidentally discovered a mysterious phenomenon which he termed x-rays. 
+
+96
+00:08:11,700 --> 00:08:16,050
+Okay,and it's a novel thing. 
+
+97
+00:08:16,075 --> 00:08:20,800
+People had difficulty determining whether it's a particle or a wave. 
+
+98
+00:08:20,925 --> 00:08:27,100
+And, but in any case Roentgen got recognized by his work in discovering the x-ray.
+
+99
+00:08:27,125 --> 00:08:36,525
+And he actually was the first Nobel Prize winner in 1901 of the physics prize
+
+100
+00:08:37,450 --> 00:08:43,600
+And now in 1912, von Laue solved the problem, resolved the problem, 
+
+101
+00:08:43,675 --> 00:08:46,275
+whether an x-ray is a particle or a wave. 
+
+102
+00:08:46,275 --> 00:08:52,325
+And Von Laue, he had this great idea
+
+103
+00:08:52,400 --> 00:08:57,775
+ by shining the x-ray through crystals like salt and so on.
+
+104
+00:08:57,925 --> 00:09:00,925
+And he managed to get a diffraction pattern. 
+
+105
+00:09:01,225 --> 00:09:03,450
+And I think according to the standard of the time, 
+
+106
+00:09:03,550 --> 00:09:07,300
+if you can get diffraction pattern, then it has to be wave
+
+107
+00:09:07,550 --> 00:09:11,250
+because particles, they don't interfere with each other. 
+
+108
+00:09:11,275 --> 00:09:13,750
+Now that's not the end of the story 
+
+109
+00:09:13,800 --> 00:09:19,700
+I think it's fine for von Laue to receive a Nobel prize for his work,
+
+110
+00:09:19,725 --> 00:09:22,725
+but there are better things to come. 
+
+111
+00:09:22,850 --> 00:09:27,750
+In 1913, the Braggs, father and son team, 
+
+112
+00:09:27,825 --> 00:09:32,450
+they derived a mathematical formula for the diffraction pattern.
+
+113
+00:09:32,525 --> 00:09:36,350
+To see that, well, how do you explain the diffraction pattern
+
+114
+00:09:36,375 --> 00:09:41,200
+Well, the mathematics using optics, then you can do it
+
+115
+00:09:41,300 --> 00:09:48,575
+And, this has a very big implication.
+
+116
+00:09:49,200 --> 00:09:55,275
+Once you have the ability to use mathematics to analyze and make predictions, 
+
+117
+00:09:55,750 --> 00:09:58,025
+then you can use it in research
+
+118
+00:09:58,075 --> 00:10:01,875
+I mean suppose you have a crystal of unknown structure, 
+
+119
+00:10:02,150 --> 00:10:04,250
+and you take some x-ray pictures, 
+
+120
+00:10:04,350 --> 00:10:07,850
+maybe many of them from different angles and so on.
+
+121
+00:10:08,175 --> 00:10:10,400
+Now, you look at the mathematics,
+
+122
+00:10:11,800 --> 00:10:19,375
+sometimes you will be able to recover what the crystal structure must be like. 
+
+123
+00:10:21,900 --> 00:10:25,275
+That's a great thought.
+
+124
+00:10:25,275 --> 00:10:29,275
+that you look at -- you take a photo of something, 
+
+125
+00:10:29,300 --> 00:10:35,000
+and you come back to figure out what's the secret of the crystals. 
+
+126
+00:10:35,275 --> 00:10:38,375
+And this is immensely successful, 
+
+127
+00:10:38,375 --> 00:10:46,450
+and it used many, many Nobel prizes in the next fifty years 
+
+128
+00:10:46,575 --> 00:10:52,450
+ And, actually, they get more and more ambitious. 
+
+129
+00:10:52,475 --> 00:10:57,350
+You can,Initially, because the math formula is pretty messy, 
+
+130
+00:10:57,450 --> 00:10:59,675
+so you can only analyze very simple things,
+
+131
+00:10:59,675 --> 00:11:03,850
+like in inorganic material molecules
+
+132
+00:11:03,950 --> 00:11:12,150
+but later on, even very large molecules of importance to biology,
+
+133
+00:11:12,275 --> 00:11:15,825
+people found ways of analyzing them 
+
+134
+00:11:15,850 --> 00:11:22,175
+and determining the structure of these proteins and these structures.
+
+135
+00:11:23,075 --> 00:11:29,800
+So very complicated things you can do, by this simple idea 
+
+136
+00:11:30,000 --> 00:11:33,950
+And so now let's summarize what we have done so far  
+
+137
+00:11:33,950 --> 00:11:35,650
+What we have discovered is 
+
+138
+00:11:35,700 --> 00:11:39,675
+that if you use the x-rays, I mean this is light wave.
+
+139
+00:11:39,800 --> 00:11:44,200
+If you use it and you take pictures, you can recover. 
+
+140
+00:11:44,250 --> 00:11:46,300
+Or in our computer science mind, 
+
+141
+00:11:46,325 --> 00:11:52,250
+you can compute a function of the object some secret of the object. 
+
+142
+00:11:53,125 --> 00:11:56,825
+So now the question, this would be an intellectual leap
+
+143
+00:11:56,850 --> 00:12:01,225
+in saying that if I look at an integer, 
+
+144
+00:12:02,025 --> 00:12:07,075
+is there a way for me to take an x-ray picture of the integer?
+
+145
+00:12:07,600 --> 00:12:10,925
+ Of course, if you write the bits, you put an x-ray through it. 
+
+146
+00:12:10,925 --> 00:12:15,200
+I think you would just get exactly back what you start with.
+
+147
+00:12:15,425 --> 00:12:23,200
+So, you have to build a crystal somehow, based upon this integer. 
+
+148
+00:12:23,550 --> 00:12:27,450
+And then you take x-ray threw it. 
+
+149
+00:12:27,500 --> 00:12:31,050
+And perhaps you will be able to do it. 
+
+150
+00:12:31,075 --> 00:12:34,100
+So the answer is yes, 
+
+151
+00:12:34,125 --> 00:12:37,825
+the kind of the first stage is to design this classical algorithm.
+
+152
+00:12:37,825 --> 00:12:42,025
+And now we are designing really an optical algorithm.
+
+153
+00:12:42,050 --> 00:12:48,425
+But, since it's classical physics, if it's classical physics,
+
+154
+00:12:48,525 --> 00:12:51,800
+I can simulate it with the classical computer. 
+
+155
+00:12:51,875 --> 00:12:55,650
+So it will be a classical algorithm. Okay.
+
+156
+00:12:56,900 --> 00:13:03,575
+So, let's just imagine that we're taking this x-ray photo of the integer n
+
+157
+00:13:03,650 --> 00:13:09,150
+and first we -- there is some way ...  you have to do it smartly, in order to grow a crystal. 
+
+158
+00:13:09,200 --> 00:13:16,025
+And then you have this x-ray on it. And look at the diffraction pattern,
+
+159
+00:13:16,075 --> 00:13:20,500
+maybe you have to do it several times. 
+
+160
+00:13:20,600 --> 00:13:25,875
+And you figure out, you examine the photo and you figure out what this factor is. 
+
+161
+00:13:25,900 --> 00:13:27,825
+This can actually be done. 
+
+162
+00:13:28,600 --> 00:13:33,575
+There's kind of messy mathematics in it, but this actually can be done.
+
+163
+00:13:33,950 --> 00:13:39,100
+ And so this is basically the pictorial way of seeing it. 
+
+164
+00:13:39,100 --> 00:13:40,550
+You have this integer. 
+
+165
+00:13:40,900 --> 00:13:44,350
+You kind of do an optical experiment.  
+
+166
+00:13:44,350 --> 00:13:47,200
+You look at the pattern and you see what it is.
+
+167
+00:13:47,300 --> 00:13:52,525
+And now the problem is that the crystal is of enormous size. 
+
+168
+00:13:52,650 --> 00:13:57,375
+So essentially, if you do the naïve thing, build this crystal, 
+
+169
+00:13:57,400 --> 00:14:08,675
+I think the whole galaxy, and maybe the whole universe, will not be enough to support this experiment. 
+
+170
+00:14:09,675 --> 00:14:19,175
+And now come to the next stage. So now here's the critical observation
+
+171
+00:14:19,275 --> 00:14:24,350
+The first one is that we don't need the whole photo.
+
+172
+00:14:24,775 --> 00:14:26,975
+Because classically, you take an x-ray, 
+
+173
+00:14:27,025 --> 00:14:32,950
+the doctor will see the whole negative, and then look at it, but we don't need that. 
+
+174
+00:14:32,975 --> 00:14:36,575
+Actually, we only need a few sample points. 
+
+175
+00:14:36,750 --> 00:14:40,400
+So we don't need exponential number of samples.
+
+176
+00:14:40,450 --> 00:14:42,875
+We only need a polynomial number of samples. 
+
+177
+00:14:42,950 --> 00:14:45,725
+So that's progress.
+
+178
+00:14:46,600 --> 00:14:48,850
+Now, how do you take samples? 
+
+179
+00:14:48,850 --> 00:14:52,575
+Even taking one sample, It's sort of difficult,
+
+180
+00:14:52,575 --> 00:14:57,575
+because if you look at taking one sample, 
+
+181
+00:14:57,650 --> 00:15:03,700
+the calculation you do, it's the sum over an exponential number of terms. 
+
+182
+00:15:03,875 --> 00:15:08,125
+So if you use the classical algorithm to do it, it's still hard. 
+
+183
+00:15:08,525 --> 00:15:13,250
+But that exponential sum is very structured. 
+
+184
+00:15:13,525 --> 00:15:19,375
+So that if you use a clever way to do the [computation]
+
+185
+00:15:19,425 --> 00:15:21,325
+ if you have a quantum computer, 
+
+186
+00:15:21,400 --> 00:15:25,100
+you can do something called the quantum Fourier transform. 
+
+187
+00:15:25,450 --> 00:15:28,775
+ if you have quantum computer, you can do the trick of the monkey king. 
+
+188
+00:15:28,800 --> 00:15:32,250
+So that you can do the kind of parallel search, 
+
+189
+00:15:32,625 --> 00:15:38,200
+and do it with an exponential amount of saving in terms of time. 
+
+190
+00:15:38,350 --> 00:15:41,850
+Ok, now, what does it mean to take one sample?
+
+191
+00:15:41,925 --> 00:15:44,500
+ And now here comes the punch line, 
+
+192
+00:15:44,525 --> 00:15:48,825
+where the wave-particle duality comes in. 
+
+193
+00:15:49,700 --> 00:15:55,575
+Taking one sample means that, usually when I take an x-ray picture, 
+
+194
+00:15:55,575 --> 00:16:00,225
+there are many x-ray photons are going through your body and so on. 
+
+195
+00:16:00,375 --> 00:16:04,200
+But suppose you make a light to be dimmer and dimmer
+
+196
+00:16:04,275 --> 00:16:12,050
+ until eventually there's only one photon at a time that can go through the apparatus.
+
+197
+00:16:12,875 --> 00:16:18,875
+And now the wave-particle duality is saying
+
+198
+00:16:18,875 --> 00:16:22,850
+that even though it's just one photon, one particle going through it,
+
+199
+00:16:23,150 --> 00:16:30,975
+that actually, the probability distribution will be identical to the classical one. 
+
+200
+00:16:31,525 --> 00:16:35,425
+So that you are going to have exactly the same distribution,
+
+201
+00:16:35,475 --> 00:16:37,150
+so if I can sample, 
+
+202
+00:16:37,325 --> 00:16:44,025
+just do it for one photon, and detect where the photon lands. 
+
+203
+00:16:44,250 --> 00:16:51,025
+And you see that the critical point is that when it's a particle. 
+
+204
+00:16:51,050 --> 00:16:58,600
+And then you can talk about I want to detect where the photon will land. 
+
+205
+00:16:58,675 --> 00:17:02,236
+When you measure them, they can only land in one place. 
+
+206
+00:17:02,236 --> 00:17:06,125
+So you get a very definitive sample point of the whole thing. 
+
+207
+00:17:06,375 --> 00:17:13,853
+So, the net result is that you combine these together, 
+
+208
+00:17:13,925 --> 00:17:21,775
+you get a quantum algorithm, of a kind of polynomial running time.
+
+209
+00:17:22,650 --> 00:17:31,575
+I think that's the kind of summary of the main part that the main point I want to make that
+
+210
+00:17:31,575 --> 00:17:34,575
+where does the quantum power come from? 
+
+211
+00:17:34,625 --> 00:17:39,600
+It's no more mysterious than the mystery of quantum physics. 
+

@@ -1,0 +1,211 @@
+Okay, And now, since 1981,
+ there has been a lot of progress 
+in designing quantum algorithms and thinking about implementation
+so that there's a lot of work on how to utilize quantum power. 
+And for example, 
+I want to specifically mention a particularly famous and striking example
+namely that we know that in modern cryptography, 
+there are many crypto systems to protect secrets. 
+They would use something related to factoring of large integers.
+And now if I give you, say, a 400-bit -- a 400-digit integer, 
+it turns out to be extremely difficult to factor it. 
+So we all know that multiplication is easy. 
+If you multiply two 200-digit numbers, 
+I think that you can do it very fast,
+and certainly with a computer, you can do it really fast. 
+But if I give you a 400-bit -- digit number,
+and ask you where are the two factors, and you will have difficulty doing it. 
+And now this problem turns out to have a quantum algorithm, 
+proposed by Peter Shor in 1994.
+And it's been proved 
+that a quantum computer will be able to factor it much faster. 
+So there are many ways to estimate 
+what the running times are of the quantum computer.
+and so one estimate saying that 
+if you today want to factor at 400-digit number on the supercomputer, 
+it would take 600,000 years.
+but if you do it on a quantum computer,
+and when a suitably sized quantum computer is available, 
+ok, then you can do it in a few hours, and possibly minutes. 
+So Peter Shor's algorithm, 
+it's probably the most famous quantum algorithm. 
+But that's not the only quantum algorithm that is actually important.
+I mean, the factoring is great for crypto-code breaking,
+ but there are other things actually related to.
+one of the questions from Feynman.
+ If you have quantum computers, can you simulate quantum systems? 
+And it turns out for by now, 
+there are large classes of problems people have proved,
+ that it's possible to simulate many quantum physical systems with the quantum computer. 
+And now, in particular,
+if you really have very powerful quantum computers to simulate physical systems, 
+you would be able to make progress on problems 
+such as the design of new materials, or the design of drugs, and so on. 
+And so it would have enormous potential impact. 
+And there are things that are actually pretty classical type of nonlinear optimization, 
+and also there are things related to problems in machine learning, and AI, 
+Quantum computing is in addition very useful in related fields, 
+like in quantum communication and quantum cryptography.
+I think it's a subject that the QCrypt conference is devoted to.
+ So this would relate to things like unbreakable codes
+and many other cryptographic operations using quantum operations. 
+And now, I think that it's fit to point out 
+that we have some of the originators of the field and also great system builders here. 
+Ah, I think that the famous work by Charles Bennett and Gilles Brassard 
+is really the kind of the people who pioneered the whole field. 
+And professor Jian-Wei Pan is a person 
+who is really one of the leading experimental system builders in this area.
+ I think including the Micius satellite.
+I think this is among the great achievements.
+And now, as I mentioned the very beginning 
+the "how" and "why" of quantum computer 
+remain mysterious to outsiders.
+And so now we're going to the heart of the matter.
+ Let's see that how quantum power can be used to speed things up. 
+And actually, we are going to look at this famous quantum algorithm
+for doing a factoring by Peter Shor. 
+Peter Shor's algorithm is very mathematical, 
+so I'm going to present it in a different way. 
+And so, kind of hide all the mathematics, 
+But doing things in a more conceptual way.
+So I'm going to do it in two steps.
+In the first step, 
+I'm going to describe an alternative classical algorithms 
+to the standard factoring algorithms that a number of theorists are doing
+So we're going to design a classical algorithm to solve this problem. 
+And unfortunately, this classical algorithm would also run in exponential time
+However, this algorithm is going to have the advantage 
+where if you look at it and if you think about the essence of quantum mechanics, 
+you'll be able to simulate it with a quantum computer, 
+with the exponential speedup. 
+And so therefore, we're going to do a two-step thing. 
+First, we're going to design a classical algorithm, 
+and the second part is that we're going to show the quantum power is enough 
+to simulate how this classical algorithms is used
+And the wave-particle duality is going to come in at the second stage. 
+And now, actually, this classical algorithm itself is really interesting 
+because it has some famous forerunner 
+because it's really the descendant of some very famous work in physics. 
+And this branch of physics or chemistry, is called x-ray crystallography. 
+Okay,it's using x-rays to take pictures 
+like you know, that we take chest x-ray pictures to see whether there is any disease. 
+Or when you hurt your leg, 
+you take x-ray pictures to see whether the bones are intact or not. 
+Okay now, this very famous line of work starting in 1895 with Roentgen,
+ who accidentally discovered a mysterious phenomenon which he termed x-rays. 
+Okay,and it's a novel thing. 
+People had difficulty determining whether it's a particle or a wave. 
+And, but in any case Roentgen got recognized by his work in discovering the x-ray.
+And he actually was the first Nobel Prize winner in 1901 of the physics prize
+And now in 1912, von Laue solved the problem, resolved the problem, 
+whether an x-ray is a particle or a wave. 
+And Von Laue, he had this great idea
+ by shining the x-ray through crystals like salt and so on.
+And he managed to get a diffraction pattern. 
+And I think according to the standard of the time, 
+if you can get diffraction pattern, then it has to be wave
+because particles, they don't interfere with each other. 
+Now that's not the end of the story 
+I think it's fine for von Laue to receive a Nobel prize for his work,
+but there are better things to come. 
+In 1913, the Braggs, father and son team, 
+they derived a mathematical formula for the diffraction pattern.
+To see that, well, how do you explain the diffraction pattern
+Well, the mathematics using optics, then you can do it
+And, this has a very big implication.
+Once you have the ability to use mathematics to analyze and make predictions, 
+then you can use it in research
+I mean suppose you have a crystal of unknown structure, 
+and you take some x-ray pictures, 
+maybe many of them from different angles and so on.
+Now, you look at the mathematics,
+sometimes you will be able to recover what the crystal structure must be like. 
+That's a great thought.
+that you look at -- you take a photo of something, 
+and you come back to figure out what's the secret of the crystals. 
+And this is immensely successful, 
+and it used many, many Nobel prizes in the next fifty years 
+ And, actually, they get more and more ambitious. 
+You can,Initially, because the math formula is pretty messy, 
+so you can only analyze very simple things,
+like in inorganic material molecules
+but later on, even very large molecules of importance to biology,
+people found ways of analyzing them 
+and determining the structure of these proteins and these structures.
+So very complicated things you can do, by this simple idea (PPT 14)
+And so now let's summarize what we have done so far  
+What we have discovered is 
+that if you use the x-rays, I mean this is light wave.
+If you use it and you take pictures, you can recover. 
+Or in our computer science mind, 
+you can compute a function of the object some secret of the object. 
+So now the question, this would be an intellectual leap
+in saying that if I look at an integer, 
+is there a way for me to take an x-ray picture of the integer?
+ Of course, if you write the bits, you put an x-ray through it. 
+I think you would just get exactly back what you start with.
+So, you have to build a crystal somehow, based upon this integer. 
+And then you take x-ray threw it. 
+And perhaps you will be able to do it. 
+So the answer is yes, 
+the kind of the first stage is to design this classical algorithm.
+And now we are designing really an optical algorithm.
+But, since it's classical physics, if it's classical physics,
+I can simulate it with the classical computer. 
+So it will be a classical algorithm. Okay.
+So, let's just imagine that we're taking this x-ray photo of the integer n
+and first we -- there is some way -- you have to do it smartly, in order to grow a crystal. 
+And then you have this x-ray on it. And look at the diffraction pattern,
+maybe you have to do it several times. 
+And you figure out, you examine the photo and you figure out what this factor is. 
+This can actually be done. 
+There's kind of messy mathematics in it, but this actually can be done.
+ And so this is basically the pictorial way of seeing it. 
+You have this integer. 
+You kind of do an optical experiment. 
+You look at the pattern and you see what it is.
+And now the problem is that the crystal is of enormous size. 
+So essentially, if you do the naïve thing, build this crystal, 
+I think the whole galaxy, and maybe the whole universe, will not be enough to support this experiment. 
+And now come to the next stage. So now here's the critical observation
+The first one is that we don't need the whole photo.
+Because classically, you take an x-ray, 
+the doctor will see the whole negative, and then look at it, but we don't need that. 
+Actually, we only need a few sample points. 
+So we don't need exponential number of samples.
+We only need a polynomial number of samples. 
+So that's progress.
+Now, how do you take samples? 
+Even taking one sample, It's sort of difficult,
+because if you look at taking one sample, 
+the calculation you do, it's the sum over an exponential number of terms. 
+So if you use the classical algorithm to do it, it's still hard. 
+But that exponential sum is very structured. 
+So that if you use a clever way to do the [computation]
+ if you have a quantum computer, 
+you can do something called the quantum Fourier transform. 
+ if you have quantum computer, you can do the trick of the monkey king. 
+So that you can do the kind of parallel search, 
+and do it with an exponential amount of saving in terms of time. 
+Ok, now, what does it mean to take one sample?
+ And now here comes the punch line, 
+where the wave-particle duality comes in. 
+Taking one sample means that, usually when I take an x-ray picture, 
+there are many x-ray photons are going through your body and so on. 
+But suppose you make a light to be dimmer and dimmer
+ until eventually there's only one photon at a time that can go through the apparatus.
+And now the wave-particle duality is saying
+that even though it's just one photon, one particle going through it,
+that actually, the probability distribution will be identical to the classical one. 
+So that you are going to have exactly the same distribution,
+so if I can sample, 
+just do it for one photon, and detect where the photon lands. 
+And you see that the critical point is that when it's a particle. 
+And then you can talk about I want to detect where the photon will land. 
+When you measure them, they can only land in one place. 
+So you get a very definitive sample point of the whole thing. 
+So, the net result is that you combine these together, 
+you get a quantum algorithm, of a kind of polynomial running time.
+I think that's the kind of summary of the main part that the main point I want to make that
+where does the quantum power come from? 
+It's no more mysterious than the mystery of quantum physics. 

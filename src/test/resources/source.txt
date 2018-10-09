@@ -1,0 +1,422 @@
+Okay, And now, since 1981,
+自1981年以来，
+ there has been a lot of progress 
+科学家已经取得了巨大进步,
+in designing quantum algorithms and thinking about implementation
+在量子算法的设计和实现上。
+so that there's a lot of work on how to utilize quantum power. 
+做出了很多利用量子特性加速计算的工作。
+And for example, 
+比如说,
+I want to specifically mention a particularly famous and striking example
+下面我会举一个非常著名的量子算法例子。
+namely that we know that in modern cryptography, 
+我们知道在现代密码学中，
+there are many crypto systems to protect secrets. 
+有许多密码系统用来保护信息。
+They would use something related to factoring of large integers.
+它们利用大数分解来进行加密
+And now if I give you, say, a 400-bit -- a 400-digit integer, 
+现在如果我给你一个400位的数字
+it turns out to be extremely difficult to factor it. 
+事实证明你很难直接分解出它的因数
+So we all know that multiplication is easy. 
+我们知道两个数的乘法很容易
+If you multiply two 200-digit numbers, 
+如果把两个200位的数相乘，
+I think that you can do it very fast,
+你可以很快的计算出结果。
+and certainly with a computer, you can do it really fast. 
+如果用计算机来计算的话，甚至会更快。
+But if I give you a 400-bit -- digit number,
+但是我给你一个400位的数字，
+and ask you where are the two factors, and you will have difficulty doing it. 
+让你计算出它的两个因数，你很难解出来。
+And now this problem turns out to have a quantum algorithm, 
+但事实上有个量子算法能解决这个问题，
+proposed by Peter Shor in 1994.
+它是由Peter Shor在1994年提出。
+And it's been proved 
+而且已经被证明
+that a quantum computer will be able to factor it much faster. 
+量子计算机能够非常快速的分解大数。
+So there are many ways to estimate 
+有很多方法可以估计
+what the running times are of the quantum computer.
+量子计算机运行该算法的时间。
+and so one estimate saying that 
+一种估计是，
+if you today want to factor at 400-digit number on the supercomputer, 
+如果你使用超级计算机来分解一个400位的数字，
+it would take 600,000 years.
+大概需要60万年。
+but if you do it on a quantum computer,
+但如果你用量子计算机来计算，
+and when a suitably sized quantum computer is available, 
+假设我们已经有了一台合适的量子计算机，
+ok, then you can do it in a few hours, and possibly minutes. 
+你只需要几个小时甚至几十分钟就能完成计算。
+So Peter Shor’s algorithm, 
+所以Peter Shor的这个量子算法，
+it's probably the most famous quantum algorithm. 
+也许是最著名的量子算法。
+But that's not the only quantum algorithm that is actually important.
+但这并不是唯一重要的量子算法。
+I mean, the factoring is great for crypto-code breaking,
+我的意思是，大数分解算法对破解加密系统非常有用
+ but there are other things actually related to.
+但是也有许多其他的重要算法，
+one of the questions from Feynman.
+其中一个便是费曼的问题：
+ If you have quantum computers, can you simulate quantum systems? 
+“量子计算机否能够模拟量子系统？”
+And it turns out for by now, 
+事实上到目前为止，
+there are large classes of problems people have proved,
+已经证明,量子计算机能解决许多种问题，
+ that it's possible to simulate many quantum physical systems with the quantum computer. 
+用量子计算机也确实可以模拟许多量子系统。
+And now, in particular,
+现在尤其是
+if you really have very powerful quantum computers to simulate physical systems, 
+可以利用量子计算机去模拟特定的量子系统
+you would be able to make progress on problems 
+从而可以在许多问题上取得进展，
+such as the design of new materials, or the design of drugs, and so on. 
+比如新材料的开发，以及新药物的研制等。
+And so it would have enormous potential impact. 
+所以，量子计算机将会产生巨大的影响。
+And there are things that are actually pretty classical type of nonlinear optimization, 
+此外还有一些经典的非线性优化问题
+and also there are things related to problems in machine learning, and AI, 
+以及机器学习，人工智能相关的问题
+Quantum computing is in addition very useful in related fields, 
+量子计算在一些相关的领域也非常有用
+like in quantum communication and quantum cryptography.
+比如量子通信和量子密码学。
+I think it's a subject that the QCrypt conference is devoted to.
+我认为这也是Qcrypt会议讨论的议题。
+ So this would relate to things like unbreakable codes
+这涉及到像使用量子计算来破译密码
+and many other cryptographic operations using quantum operations. 
+以及其它的加密解密操作。
+And now, I think that it's fit to point out 
+现在我认为这是一个合适的时机去介绍一下
+that we have some of the originators of the field and also great system builders here. 
+这个领域的一些先驱者和开创者。
+Ah, I think that the famous work by Charles Bennett and Gilles Brassard 
+坐在台下的Charles Bennett 和 Gilles Brassard做出了许多著名的工作，
+is really the kind of the people who pioneered the whole field. 
+他们是这个领域的伟大先驱。
+And professor Jian-Wei Pan is a person 
+此外，潘建伟教授
+who is really one of the leading experimental system builders in this area.
+是这个领域中实验方向的杰出领导者之一，
+ I think including the Micius satellite.
+我认为像墨子号量子卫星
+I think this is among the great achievements.
+是一个非常伟大的成就。
+And now, as I mentioned the very beginning 
+正如我前面提到的，
+the “how” and “why” of quantum computer 
+“为什么量子计算机这么强大？它是如何做到的？”
+remain mysterious to outsiders.
+外行仍然不能理解。
+And so now we're going to the heart of the matter.
+所以我现在要谈到问题的核心。
+ Let's see that how quantum power can be used to speed things up. 
+量子计算机是如何加速计算的？
+And actually, we are going to look at this famous quantum algorithm
+我接下来将介绍这个著名的量子算法-
+for doing a factoring by Peter Shor. 
+由Shor发明的大数分解量子算法。
+Peter Shor’s algorithm is very mathematical, 
+Shor的这个算法是非常数学化的，
+so I’m going to present it in a different way. 
+所以我将以不同的方式呈现它。
+And so, kind of hide all the mathematics, 
+我会略过高深的数学表达，
+But doing things in a more conceptual way.
+以更概念性的方式来讲解。
+So I’m going to do it in two steps.
+因此我会分成两步来介绍Shor算法。
+In the first step, 
+在第一步中，
+I'm going to describe an alternative classical algorithms 
+我将描述一个经典算法
+to the standard factoring algorithms that a number of theorists are doing
+来替代大数分解算法。
+So we're going to design a classical algorithm to solve this problem. 
+即我们设计了一个经典算法来解决这个问题。
+And unfortunately, this classical algorithm would also run in exponential time
+不幸的是，这个经典算法需要消耗指数级多的时间
+However, this algorithm is going to have the advantage 
+但是这个经典算法也有好处，
+where if you look at it and if you think about the essence of quantum mechanics, 
+它可以帮助你理解量子力学的本质。
+you'll be able to simulate it with a quantum computer, 
+你可以用量子计算机模拟它，
+with the exponential speedup. 
+并获得指数加速。
+And so therefore, we’re going to do a two-step thing. 
+因此我们将分成两步
+First, we're going to design a classical algorithm, 
+第一步我们要设计一个经典算法，
+and the second part is that we're going to show the quantum power is enough 
+第二步我们将展示量子计算机足够强大
+to simulate how this classical algorithms is used
+去模拟经典算法。
+And the wave-particle duality is going to come in at the second stage. 
+波粒二象性会出现在第二步中。
+And now, actually, this classical algorithm itself is really interesting 
+实际上这个经典算法本身很有趣，
+because it has some famous forerunner 
+因为它涉及到一些著名的先驱科学家的工作。
+because it's really the descendant of some very famous work in physics. 
+它也确实是由一些著名的物理学工作启发而成。
+And this branch of physics or chemistry, is called x-ray crystallography. 
+这个物理或者化学分支，叫做X射线晶体学。
+Okay,it's using x-rays to take pictures 
+它是用X光来拍摄照片，
+like you know, that we take chest x-ray pictures to see whether there is any disease. 
+就像我们拍胸部X光照片看是否有任何疾病。
+Or when you hurt your leg, 
+或者当你的腿受伤时，
+you take x-ray pictures to see whether the bones are intact or not. 
+你会拍X光照片看骨头是否受伤。
+Okay now, this very famous line of work starting in 1895 with Roentgen,
+这个著名的工作起源于Roentgen在1895年的发现，
+ who accidentally discovered a mysterious phenomenon which he termed x-rays. 
+他偶然发现了一种他称之为X射线的神秘现象。
+Okay,and it's a novel thing. 
+这是一个新奇的东西。
+People had difficulty determining whether it's a particle or a wave. 
+人们很难确定它是一个粒子还是一个波。
+And, but in any case Roentgen got recognized by his work in discovering the x-ray.
+无论如何，Roentgen因发现X射线的工作中而得到了认可。
+And he actually was the first Nobel Prize winner in 1901 of the physics prize
+他实际上在1901年获得了第一届诺贝尔物理学奖。
+And now in 1912, von Laue solved the problem, resolved the problem, 
+然后在1912年，von Laue分析了这个问题，
+whether an x-ray is a particle or a wave. 
+X射线到底是粒子还是波？
+And Von Laue, he had this great idea
+他提出一个很棒的想法：
+ by shining the x-ray through crystals like salt and so on.
+把X射线照射到像盐这样的晶体上。
+And he managed to get a diffraction pattern. 
+他设法得到一个衍射图案。
+And I think according to the standard of the time, 
+按照当时的科学理论水平，
+if you can get diffraction pattern, then it has to be wave
+如果能得到衍射图案，那就证明它肯定是波。
+because particles, they don't interfere with each other. 
+因为粒子不会相互干涉。
+Now that's not the end of the story 
+但故事没还有结束。
+I think it's fine for von Laue to receive a Nobel prize for his work,
+我认为von Laue值得获得诺贝尔奖，
+but there are better things to come. 
+但接下来还有更棒的发现。
+In 1913, the Braggs, father and son team, 
+1913年，Braggs父子
+they derived a mathematical formula for the diffraction pattern.
+推导出了衍射现象的数学公式。
+To see that, well, how do you explain the diffraction pattern
+想想，你如何解释衍射图样？
+Well, the mathematics using optics, then you can do it
+用怎样的数学公式才能解释它。
+And, this has a very big implication.
+这个工作意义重大。
+Once you have the ability to use mathematics to analyze and make predictions, 
+一旦你能用数学公式来分析和预测，
+then you can use it in research
+那么你就能运用在实验中。
+I mean suppose you have a crystal of unknown structure, 
+假设你有一个未知结构的晶体，
+and you take some x-ray pictures, 
+你拍摄了一些x射线照片，
+maybe many of them from different angles and so on.
+也许从各个角度都拍摄了。
+Now, you look at the mathematics,
+现在根据数学公式，
+sometimes you will be able to recover what the crystal structure must be like. 
+你甚至可以恢复出晶体的结构。
+That's a great thought.
+这真是个好办法.
+that you look at -- you take a photo of something, 
+你只是拍了张照片，
+and you come back to figure out what's the secret of the crystals. 
+然后就能恢复出晶体的结构。
+And this is immensely successful, 
+这个方法是非常成功的，
+and it used many, many Nobel prizes in the next fifty years 
+因为接下来的许多年由它又产生了许多诺贝尔奖。
+ And, actually, they get more and more ambitious. 
+事实上，科学家们后来变得更有野心。
+You can,Initially, because the math formula is pretty messy, 
+因为最初的数学公式很粗糙，
+so you can only analyze very simple things,
+你只能分析非常简单的东西，
+like in inorganic material molecules
+比如无机材料分子。
+but later on, even very large molecules of importance to biology,
+但后来，可以逐渐分析更复杂的生物大分子。
+people found ways of analyzing them 
+科学家们找到了分析它们的方法，
+and determining the structure of these proteins and these structures.
+并确定了这些蛋白质的结构
+So very complicated things you can do, by this simple idea (PPT 14)
+所以通过非常简单的思路，却可以做很复杂的事情。
+And so now let's summarize what we have done so far  
+现在来总结一下我们做了什么
+What we have discovered is 
+我们发现
+that if you use the x-rays, I mean this is light wave.
+如果你使用X射线，即这种光波，
+If you use it and you take pictures, you can recover. 
+对一些东西拍照，你就可恢复出这些东西的结构。
+Or in our computer science mind, 
+用我们计算机科学的语言来说，
+you can compute a function of the object some secret of the object. 
+你可以计算出被研究对象的一些秘密
+So now the question, this would be an intellectual leap
+所以这是智力上的一大飞跃。
+in saying that if I look at an integer, 
+类似的如果我想分析一个整数，
+is there a way for me to take an x-ray picture of the integer?
+有没有办法让我拍一张整数的X光照片？
+ Of course, if you write the bits, you put an x-ray through it. 
+当然，如果你写下这个数字，然后用X射线照射它，
+I think you would just get exactly back what you start with.
+我想你就回到了我前面刚开始讲的地方。
+So, you have to build a crystal somehow, based upon this integer. 
+即你需要根据这个整数构造一个晶体，
+And then you take x-ray threw it. 
+然后用X射线去照射它。
+And perhaps you will be able to do it. 
+也许你能做到这一点。
+So the answer is yes, 
+答案是肯定的。
+the kind of the first stage is to design this classical algorithm.
+第一步就是设计出这个经典算法，
+And now we are designing really an optical algorithm.
+而我们正在设计的就是这种光学算法。
+But, since it's classical physics, if it's classical physics,
+但由于它是经典物理学范畴，
+I can simulate it with the classical computer. 
+我们可以用经典计算机来模拟它。
+So it will be a classical algorithm. Okay.
+所以它是一个经典算法。
+So, let's just imagine that we're taking this x-ray photo of the integer n
+然后想象一下用X射线去给这个整数n拍照
+and first we -- there is some way -- you have to do it smartly, in order to grow a crystal. 
+不过首先你需要足够聪明地去构造出一个晶体
+And then you have this x-ray on it. And look at the diffraction pattern,
+然后你用X射线去拍照，看一下衍射图案
+maybe you have to do it several times. 
+当然也许你需要多试几次
+And you figure out, you examine the photo and you figure out what this factor is. 
+接着你分析照片，就可以得到这个数字的因数
+This can actually be done. 
+实际上这是可以完成的,
+There's kind of messy mathematics in it, but this actually can be done.
+尽管里面涉及到一些复杂的数学。
+ And so this is basically the pictorial way of seeing it. 
+这基本上就是图像化的去理解这个经典算法
+You have this integer. 
+即你有一个整数需要因数分解，
+You kind of do an optical experiment. 
+然后你做一个光学实验
+You look at the pattern and you see what it is.
+通过衍射图案就能分析出结果
+And now the problem is that the crystal is of enormous size. 
+现在问题是这个晶体的体积非常巨大。
+So essentially, if you do the naïve thing, build this crystal, 
+如果你想天真的去建造这个晶体，
+I think the whole galaxy, and maybe the whole universe, will not be enough to support this experiment. 
+我认为整个银河系，甚至整个宇宙都不够大
+And now come to the next stage. So now here's the critical observation
+现在进入下一步，也是最关键的地方。
+The first one is that we don't need the whole photo.
+第一我们实际上不需要整张照片
+Because classically, you take an x-ray, 
+因为传统上你去照X光，
+the doctor will see the whole negative, and then look at it, but we don't need that. 
+医生会看到整个底片，但我们不需要。
+Actually, we only need a few sample points. 
+实际上我们只需要几个样本点就够了，
+So we don't need exponential number of samples.
+并不需要指数级的样本数。
+We only need a polynomial number of samples. 
+我们只需要多项式量级的样本数，
+So that's progress.
+这就是进步之处。
+Now, how do you take samples? 
+现在的问题是如何去采样？
+Even taking one sample, It's sort of difficult,
+即使是采一个样本点? 也是很困难的。
+because if you look at taking one sample, 
+因为如果你取一个样本进行计算，
+the calculation you do, it's the sum over an exponential number of terms. 
+你需要对指数多的项求和
+So if you use the classical algorithm to do it, it's still hard. 
+所以，如果你使用经典算法来计算，它仍然很难。
+But that exponential sum is very structured. 
+但是指数多的项求和是非常结构化的
+So that if you use a clever way to do the [computation]
+如果你用一种聪明的方式去计算
+ if you have a quantum computer, 
+即如果你有一台量子计算机，
+you can do something called the quantum Fourier transform. 
+那么你可以使用量子傅里叶变换进行计算。
+ if you have quantum computer, you can do the trick of the monkey king. 
+打个比方，你可以使用前面提到的孙悟空的那种本领。
+So that you can do the kind of parallel search, 
+这样你就可以进行并行搜索，
+and do it with an exponential amount of saving in terms of time. 
+并指数级的节省时间。
+Ok, now, what does it mean to take one sample?
+这对采一个样本点意味着什么呢？
+ And now here comes the punch line, 
+现在就是最精彩的地方了，
+where the wave-particle duality comes in. 
+波粒二象性将会起作用了。
+Taking one sample means that, usually when I take an x-ray picture, 
+通常当你拍一张X光照片时，
+there are many x-ray photons are going through your body and so on. 
+有许多X光的光子穿过你的身体。
+But suppose you make a light to be dimmer and dimmer
+但是假设X光越来越弱，
+ until eventually there's only one photon at a time that can go through the apparatus.
+直到最终每次只有一个光子能通过装置。
+And now the wave-particle duality is saying
+波粒二象性告诉我们，
+that even though it's just one photon, one particle going through it,
+即使只有一个光子，仍然能通过它。
+that actually, the probability distribution will be identical to the classical one. 
+事实上，一个光子通过装置后的概率分布将与经典情形相同，
+So that you are going to have exactly the same distribution,
+这样你就会得到完全相同的分布。
+so if I can sample, 
+因此如果我能采样，
+just do it for one photon, and detect where the photon lands. 
+只需要发射一个光子并探测光子着陆的位置。
+And you see that the critical point is that when it’s a particle. 
+你看，关键之处在于只需要一个粒子
+And then you can talk about I want to detect where the photon will land. 
+然后探测光子通过晶体后的位置分布。
+When you measure them, they can only land in one place. 
+当你测量它们时，它们只能在处在一个位置。
+So you get a very definitive sample point of the whole thing. 
+因此，这个样本点包含了整个晶体的信息。
+So, the net result is that you combine these together, 
+因此，最终的结果是把这些组合在一起，
+you get a quantum algorithm, of a kind of polynomial running time.
+得到一个多项式运行时间的量子算法。
+I think that's the kind of summary of the main part that the main point I want to make that
+总结主体部分，我想要表达的主要观点是
+where does the quantum power come from? 
+量子计算的强大能力来自于什么地方
+It's no more mysterious than the mystery of quantum physics. 
+其实它并没有比量子物理更加神秘	
