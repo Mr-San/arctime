@@ -8,7 +8,7 @@ import org.junit.Test;
  */
 public class UtilTest {
     @Test
-    public void testSplit() throws Exception {
+    public void testSplit1() throws Exception {
         String dir = "E:\\Workspace\\idea\\TEMP\\arctime\\src\\test\\resources\\";
 
         String source = dir + "source.txt";
@@ -16,6 +16,18 @@ public class UtilTest {
         String english = dir + "english.txt";
 
         Util.split(source, chinese, english);
+    }
+
+    @Test
+    public void testSplit2() throws Exception {
+        String dir = "E:\\Workspace\\idea\\TEMP\\arctime\\src\\test\\resources\\";
+
+        String source = dir + "source.txt";
+        String english = dir + "english.txt";
+        String chinese1 = dir + "chinese1.txt";
+        String chinese2 = dir + "chinese2.txt";
+
+        Util.split(source, english, chinese1, chinese2);
     }
 
     @Test
